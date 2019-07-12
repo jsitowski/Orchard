@@ -21,7 +21,8 @@ fetch(url, header).then(function(r) {
   // "r.c" stands for confirmed transactions response array
   // Parse the response and render the results on the screen
   r.c.forEach(function(output) {
-    var postreply = document.getElementById("reply");
+    var threadnum = output.txid;
+    var postreply = document.getElementById("reply1");
     postreply.innerHTML =
     "<b>[Transaction ID: </b>" +
     output.txid +
@@ -36,6 +37,6 @@ fetch(url, header).then(function(r) {
         output.content +
          "<br />" +
           "<br />";
-    document.body.appendChild(reply);
+    document.body.appendChild(reply1);
   })
 })
