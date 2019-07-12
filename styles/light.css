@@ -11,5 +11,7 @@ h1 {
 
 p {
   font-family: verdana;
-  font-size: 20px;
+}
+p.reply {
+	padding-left: 50px;
 }
