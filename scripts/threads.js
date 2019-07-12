@@ -18,8 +18,6 @@ var header = {
 fetch(url, header).then(function(r) {
   return r.json()
 }).then(function(r) {
-  // "r.c" stands for confirmed transactions response array
-  // Parse the response and render the results on the screen
   r.c.forEach(function(output) {
     var post = document.getElementById("op1");
     post.innerHTML =
