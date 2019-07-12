@@ -1,9 +1,11 @@
 body {
-  background-color: lightgrey;
+  background-color: floralwhite;
 }
 
 h1 {
-  color: white;
+  color: ivory;
+  font-size: 80px;
+  text-shadow: 5px 4px black;
   text-align: center;
 }
 
