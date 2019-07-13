@@ -4,7 +4,7 @@ var queryreply = {
     "find": {
     "out.s1": "1PLKxzCP7MNVKT7bW5JzAig1VTwMxQKJrR/reply",
     },
-    "limit": 8
+    "limit": 1,
   },
   "r": {
     "f": "[ .[] | { txid: .tx.h, timestamp: .blk.t?, content: .out[0]?.s2, op: .out[0]?.s3 }]"
@@ -18,10 +18,9 @@ var header = {
 fetch(url, header).then(function(r) {
   return r.json()
 }).then(function(r) {
-  // "r.c" stands for confirmed transactions response array
-  // Parse the response and render the results on the screen
   r.c.forEach(function(output) {
     var threadnum = output.txid;
+    // do not forget about threadnum...
     var postreply = document.getElementById("reply1");
     postreply.innerHTML =
     "<b>[Transaction ID: </b>" +

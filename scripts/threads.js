@@ -3,7 +3,7 @@ var query = {
   "q": {
     "find": {
     "out.s1": "1PLKxzCP7MNVKT7bW5JzAig1VTwMxQKJrR" },
-    "limit": 1,
+    "limit": 20,
   },
   "r": {
     "f": "[ .[] | { txid: .tx.h, timestamp: .blk.t?, content: .out[0]?.s2 }]"
@@ -19,11 +19,9 @@ fetch(url, header).then(function(r) {
   return r.json()
 }).then(function(r) {
   r.c.forEach(function(output) {
-    var post = document.getElementById("op1");
+    var threadid = output.txid;
+    var post = document.createElement("post");
     post.innerHTML =
-    "<b>[Transaction ID: </b>" +
-    output.txid +
-    "<b>] </b>" +
     " <i>Post ID:</i>  " +
      output.timestamp +
       "<br />" +
@@ -31,6 +29,6 @@ fetch(url, header).then(function(r) {
         output.content +
          "<br />" +
           "<br />";
-    document.body.appendChild(op1);
+    document.body.appendChild(post);
   })
 })
