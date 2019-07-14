@@ -3,7 +3,7 @@ var query = {
   "q": {
     "find": {
     "out.s1": "1PLKxzCP7MNVKT7bW5JzAig1VTwMxQKJrR" },
-    "limit": 20,
+    "limit": 30,
   },
   "r": {
     "f": "[ .[] | { txid: .tx.h, timestamp: .blk.t?, content: .out[0]?.s2 }]"
@@ -26,7 +26,10 @@ fetch(url, header).then(function(r) {
      output.timestamp +
       "<br />" +
        "<br />" +
+       "<i>" +
         output.content +
+          "</i>" +
+          "</div>" +
          "<br />" +
           "<br />";
     document.body.appendChild(post);
