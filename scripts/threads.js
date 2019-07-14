@@ -6,10 +6,11 @@ var query = {
     "limit": 30,
   },
   "r": {
-    "f": "[ .[] | { txid: .tx.h, timestamp: .blk.t?, content: .out[0]?.s2 }]"
+    "f": "[ .[0] | { txid: .tx.h, timestamp: .blk.t?, content: .out[0]?.s2 }]"
 
   }
 }
+// parse from genesis
 var b64 = btoa(JSON.stringify(query));
 var url = "https://genesis.bitdb.network/q/1FnauZ9aUH2Bex6JzdcV4eNX7oLSSEbxtN/" + b64;
 var header = {
@@ -20,6 +21,7 @@ fetch(url, header).then(function(r) {
 }).then(function(r) {
   r.c.forEach(function(output) {
     var threadid = output.txid;
+    console.log(`txid is ${threadid} `)
     var post = document.createElement("post");
     post.innerHTML =
     " <i>Post ID:</i>  " +
@@ -36,3 +38,4 @@ fetch(url, header).then(function(r) {
     document.body.appendChild(post);
   })
 })
+
