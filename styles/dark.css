@@ -16,3 +16,6 @@ body {
 p.reply {
 	padding-left: 50px;
 }
+div.form {
+	color: green;
+}
