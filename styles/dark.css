@@ -1,0 +1,18 @@
+body {
+  background-color: darkslategray;
+}
+
+h1 {
+  color: lightslategray;
+  font-size: 80px;
+  text-shadow: 4px 2px ivory;
+  text-align: center;
+}
+
+body {
+  font-family: verdana;
+  color: ivory;
+}
+p.reply {
+	padding-left: 50px;
+}

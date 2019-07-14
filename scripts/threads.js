@@ -23,14 +23,15 @@ fetch(url, header).then(function(r) {
     var post = document.createElement("post");
     post.innerHTML =
     " <i>Post ID:</i>  " +
-     output.timestamp +
+     output.txid +
       "<br />" +
        "<br />" +
        "<i>" +
         output.content +
           "</i>" +
-          "</div>" +
-         "<br />" +
+          "<br />" +
+          "<br />" +
+          "<br />" +
           "<br />";
     document.body.appendChild(post);
   })
