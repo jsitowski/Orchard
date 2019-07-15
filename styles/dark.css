@@ -11,11 +11,25 @@ h1 {
 
 body {
   font-family: verdana;
-  color: ivory;
 }
 p.reply {
 	padding-left: 50px;
 }
 div.form {
 	color: green;
+}
+div {
+  color: ivory;
+  border-style: solid;
+  border-color: slategrey;
+  border-width: 2px;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+  outline-style: solid;
+  outline-color: darkcyan;
+  width: 50%;
+  background-color: lightslategrey;
+  margin: 25px 50px 75px;
 }
