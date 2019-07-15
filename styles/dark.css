@@ -4,8 +4,8 @@ body {
 
 h1 {
   color: lightslategray;
-  font-size: 80px;
-  text-shadow: 4px 2px ivory;
+  font-size: 110px;
+  text-shadow: 4px 2px slateblue;
   text-align: center;
 }
 
@@ -30,6 +30,23 @@ div {
   outline-style: solid;
   outline-color: darkcyan;
   width: 50%;
-  background-color: lightslategrey;
+  background-image: linear-gradient(lightslategray, darkcyan);
   margin: 25px 50px 75px;
+  text-shadow: 2px 2px 4px #000000;
+}
+textarea {
+  color: ivory;
+  border-style: solid;
+  border-color: slategrey;
+  border-width: 2px;
+  padding-top: 20px;
+  padding-right: 15px;
+  padding-bottom: 25px;
+  padding-left: 45px;
+  outline-style: solid;
+  outline-color: darkcyan;
+  width: 20%;
+  background-image: linear-gradient(darkslategray, darkcyan);
+  margin: 25px 50px 75px;
+  text-shadow: 2px 2px 4px #000000;
 }
