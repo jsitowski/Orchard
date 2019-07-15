@@ -12,7 +12,7 @@ For now, anyone can post to the board using unwriter's <a href="https://unwriter
  
 <br />
 
- Posts are queried from the blockchain using <a href="https://bitdb.network/">BitDB</a>. 
+ Posts are queried from the blockchain using <a href="https://genesis.bitdb.network/q/1FnauZ9aUH2Bex6JzdcV4eNX7oLSSEbxtN/ewogICJ2IjogMywKICAicSI6IHsKICAgICJmaW5kIjogewogICAgICAib3V0LnMxIiA6ICIxM2pnaDV2UUM1YTQzcnZhd0tWb3VyaENZN0ppQ2FEcFBIIiwKICAgICAgIm91dC5zMiI6ICJUSFJFQUQiCiAgICB9LAogICAgImxpbWl0IjogMTAKICB9Cn0=">BitDB</a>. 
 
  
 
