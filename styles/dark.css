@@ -20,19 +20,20 @@ p.reply {
   border-style: solid;
   border-color: slategrey;
   border-width: 2px;
-  padding-top: 5px;
+  padding-top: 2px;
   padding-right: 15px;
   padding-bottom: 5px;
   padding-left: 5px;
   outline-style: solid;
   outline-color: darkcyan;
-  width: 40%;
+  width: 55%;
   background-image: linear-gradient(lightslategray, darkcyan);
-  margin: 25px 25px 85px;
+  margin: 55px 25px 15px;
   text-shadow: 2px 2px 4px #000000;
   font-size: 18px;
   text-align: justify;
   overflow: auto;
+  box-sizing: border-box;
 }
 textarea {
   align-box: center;
@@ -41,12 +42,12 @@ textarea {
   border-color: slategrey;
   border-width: 2px;
   padding-top: 20px;
-  padding-right: 25px;
+  padding-right: 75px;
   padding-bottom: 25px;
   padding-left: 25px;
   outline-style: solid;
   outline-color: darkcyan;
-  width: 25%;
+  width: 45%;
   background-image: linear-gradient(darkslategray, darkcyan);
   margin: 15px 55px 5px;
   text-shadow: 2px 2px 4px #000000;
@@ -67,6 +68,8 @@ input {
   margin: 15px 35px 15px;
   text-shadow: 2px 2px 4px #000000;
 }
+input:hover {
+	background-color: darkslategrey;
 }
 .btn {
   color: ivory;
@@ -76,11 +79,11 @@ input {
   margin: 5px;
 }
 img {
-  margin: 25px 15px 10px;
+  margin: 5px 15px 10px;
   border-style: solid;
-  border-color: slategrey;
-  border-width: 2px; 
-  width: 350px;
+  border-color: black;
+  border-width: 3px; 
+  width: 70%;
   height: auto;
   float: left;
 }
@@ -98,8 +101,10 @@ h2 {
 .stamp {
 	margin: 25px 15px 10px;
 	font-size: 15px;
-	text-align: left;
+	text-align: right;
 	text-shadow: 1px 1px black;
+	bottom: 0;
+	right: 0;
 }
 .threadtext {
 	text-align: center;
