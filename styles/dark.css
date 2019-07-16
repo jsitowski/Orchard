@@ -79,5 +79,6 @@ img {
   border-style: solid;
   border-color: slategrey;
   border-width: 2px; 
-
+  width: 250px;
+  height: auto;
 }

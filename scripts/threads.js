@@ -46,7 +46,6 @@ fetch(url, header).then(function(r) {
     "<button id='reply'>Reply</button>" 
     document.body.appendChild(img);
     document.body.appendChild(thread);
-
   })
 })
 
