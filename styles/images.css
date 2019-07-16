@@ -1,0 +1,117 @@
+body {
+  background-color: darkslategray;
+}
+
+h1 {
+  color: lightslategray;
+  font-size: 110px;
+  text-shadow: 4px 2px slateblue;
+  text-align: center;
+}
+
+body {
+  font-family: verdana;
+}
+p.reply {
+	padding-left: 50px;
+}
+.thread {
+  color: ivory;
+  border-style: solid;
+  border-color: slategrey;
+  border-width: 2px;
+  padding-top: 2px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  outline-style: solid;
+  outline-color: darkcyan;
+  width: 35%;
+  background-image: linear-gradient(lightslategray, darkcyan);
+  margin: 25px 25px 15px;
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 18px;
+  text-align: justify;
+  overflow: auto;
+  box-sizing: border-box;
+}
+textarea {
+  align-box: center;
+  color: ivory;
+  border-style: solid;
+  border-color: slategrey;
+  border-width: 2px;
+  padding-top: 20px;
+  padding-right: 75px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  outline-style: solid;
+  outline-color: darkcyan;
+  width: 45%;
+  background-image: linear-gradient(darkslategray, darkcyan);
+  margin: 15px 55px 5px;
+  text-shadow: 2px 2px 4px #000000;
+}
+input {
+  color: ivory;
+  border-style: solid;
+  border-color: slategrey;
+  border-width: 2px;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  outline-style: solid;
+  outline-color: darkcyan;
+  width: 25%;
+  background-image: linear-gradient(darkslategray, darkcyan);
+  margin: 15px 35px 15px;
+  text-shadow: 2px 2px 4px #000000;
+}
+input:hover {
+	background-color: darkslategrey;
+}
+.btn {
+  color: ivory;
+  width: 10%;
+  background-image: linear-gradient(darkcyan, lightslategray);
+  text-shadow: 2px 2px 4px #000000;
+  margin: 5px;
+}
+img {
+  margin: 5px 15px 10px;
+  border-style: solid;
+  border-color: black;
+  border-width: 3px; 
+  width: 80%;
+  height: auto;
+  float: center;
+}
+.post {
+	color: ivory;
+	border-style: solid;
+	border-color: darkslategrey;
+}
+h2 {
+  color: lightslategray;
+  font-size: 20px;
+  text-shadow: 2px 2px black;
+  text-align: center;
+}
+.stamp {
+	margin: 25px 15px 10px;
+	font-size: 15px;
+	text-align: left;
+	text-shadow: 1px 1px black;
+	bottom: 0;
+	right: 0;
+}
+.threadtext {
+	text-align: center;
+}
+.pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
