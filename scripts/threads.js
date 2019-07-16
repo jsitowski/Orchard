@@ -43,12 +43,12 @@ fetch(url, header).then(function(r) {
 
   //
     thread.innerHTML =
-    "<p>" +
-    output.txt + "</p>" +
-    "<br />" +
-    "<button id='reply'>Reply</button>" ;
-    document.body.appendChild(img);
+    "<p class=stamp>" + output.timestamp +"</p>" +
+    "<img src=" + `${url}` + " class=pic></img>" +
+    "<p class=threadtext>" +
+    output.txt + "</p>";
     document.body.appendChild(thread);
+
 })
 })
 
