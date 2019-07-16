@@ -1,5 +1,5 @@
 // fetch from genesis
-var query = {
+var threads = {
   "v": 3,
   "q": {
     "find": {
@@ -10,11 +10,11 @@ var query = {
   },
   "r": {
     "f": "[ .[] | { txid: .tx.h, timestamp: .blk.t?, txt: .out[0]?.s3, img: .out[0].s4 }]"
-
   }
 }
+
 // parse it
-var b64 = btoa(JSON.stringify(query));
+var b64 = btoa(JSON.stringify(threads));
 var url = "https://genesis.bitdb.network/q/1FnauZ9aUH2Bex6JzdcV4eNX7oLSSEbxtN/" + b64;
 var header = {
   headers: { key: "14QX7pn5GbipWvNLyDfrdcZLzwvPYJSnhB" }
@@ -22,8 +22,10 @@ var header = {
 //
 fetch(url, header).then(function(r) {
   return r.json()
+
 }).then(function(r) {
   r.c.forEach(function(output) {
+
     var threadid = output.txid;
     var content = output.txt;
 
@@ -32,6 +34,7 @@ fetch(url, header).then(function(r) {
 
     var thread = document.createElement("div");
     thread.id = (`${threadid}`);
+    thread.setAttribute('class', 'thread');
    // image
     var img = document.createElement('img');
     var url = "https://bico.media/" + output.img
@@ -43,9 +46,9 @@ fetch(url, header).then(function(r) {
     "<p>" +
     output.txt + "</p>" +
     "<br />" +
-    "<button id='reply'>Reply</button>" 
+    "<button id='reply'>Reply</button>" ;
     document.body.appendChild(img);
     document.body.appendChild(thread);
-  })
+})
 })
 

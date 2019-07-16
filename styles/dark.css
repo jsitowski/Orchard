@@ -15,10 +15,7 @@ body {
 p.reply {
 	padding-left: 50px;
 }
-div.form {
-	color: green;
-}
-div {
+.thread {
   color: ivory;
   border-style: solid;
   border-color: slategrey;
@@ -67,7 +64,7 @@ input {
   text-shadow: 2px 2px 4px #000000;
 }
 }
-button {
+.btn {
   color: ivory;
   width: 10%;
   background-image: linear-gradient(darkcyan, lightslategray);
@@ -81,4 +78,9 @@ img {
   border-width: 2px; 
   width: 250px;
   height: auto;
+}
+.post {
+	color: ivory;
+	border-style: solid;
+	border-color: darkslategrey;
 }

@@ -1,18 +1,42 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="styles/dark.css">
-
+<script src="https://www.moneybutton.com/moneybutton.js"></script>
+<script src='https://unpkg.com/datapay'></script>
+<script src='https://unpkg.com/databutton'></script>
 <script src="scripts/threads.js"></script>
-
-
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+	document.querySelector("#done").addEventListener("click", function(e) {
+    document.querySelector("#submit").classList.remove('hidden')
+   	databutton.build({
+      data: ["13jgh5vQC5a43rvawKVourhCY7JiCaDpPH", "THREAD", document.querySelector("#newthread").value, document.querySelector("#imglink").value],
+      button: {
+        $el: "#button",
+        label: "",
+        onPayment: function(e) {
+          console.log("paid!", e)
+          setTimeout(function() {
+            feed()
+          }, 1000)
+        }
+      }
+    })
+  })
+})
+</script>
 </head>
 <body>
 <center>
 	<h1>Orchard</h1>
-		<textarea name="newthread" rows="5" cols="10" placeholder="Post a new thread..."></textarea>
+		<textarea id="newthread" rows="5" cols="10" placeholder="Post a new thread..."></textarea>
 		<br />
-		<input name="b://" placeholder="b:// image link"></input>
+		<input id="imglink" placeholder="b:// image link"></input>
 		<br />
-</center>
+		<a href='#' id='done' class='post'>Post</a>
+      	<div id='submit' class='hidden'>
+      	<div id='button'></div>
+      </div>
+	</center>
 </body>
 </html>	
