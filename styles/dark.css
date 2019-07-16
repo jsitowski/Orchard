@@ -23,9 +23,9 @@ div {
   border-style: solid;
   border-color: slategrey;
   border-width: 2px;
-  padding-top: 50px;
+  padding-top: 25px;
   padding-right: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
   padding-left: 80px;
   outline-style: solid;
   outline-color: darkcyan;
@@ -40,13 +40,44 @@ textarea {
   border-color: slategrey;
   border-width: 2px;
   padding-top: 20px;
-  padding-right: 15px;
+  padding-right: 25px;
   padding-bottom: 25px;
-  padding-left: 45px;
+  padding-left: 25px;
   outline-style: solid;
   outline-color: darkcyan;
-  width: 20%;
+  width: 25%;
   background-image: linear-gradient(darkslategray, darkcyan);
-  margin: 25px 50px 75px;
+  margin: 15px 35px 15px;
   text-shadow: 2px 2px 4px #000000;
+}
+input {
+  color: ivory;
+  border-style: solid;
+  border-color: slategrey;
+  border-width: 2px;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  outline-style: solid;
+  outline-color: darkcyan;
+  width: 25%;
+  background-image: linear-gradient(darkslategray, darkcyan);
+  margin: 15px 35px 15px;
+  text-shadow: 2px 2px 4px #000000;
+}
+}
+button {
+  color: ivory;
+  width: 10%;
+  background-image: linear-gradient(darkcyan, lightslategray);
+  text-shadow: 2px 2px 4px #000000;
+  margin: 5px;
+}
+img {
+  margin: 75px 35px 15px;
+  border-style: solid;
+  border-color: slategrey;
+  border-width: 2px; 
+
 }

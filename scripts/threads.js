@@ -4,11 +4,12 @@ var query = {
   "q": {
     "find": {
     "out.s1": "13jgh5vQC5a43rvawKVourhCY7JiCaDpPH",
-    "out.s2": "THREAD" },
+    "out.s2": "THREAD"
+     },
     "limit": 30,
   },
   "r": {
-    "f": "[ .[] | { txid: .tx.h, timestamp: .blk.t?, txt: .out[0]?.s3 }]"
+    "f": "[ .[] | { txid: .tx.h, timestamp: .blk.t?, txt: .out[0]?.s3, img: .out[0].s4 }]"
 
   }
 }
@@ -31,9 +32,21 @@ fetch(url, header).then(function(r) {
 
     var thread = document.createElement("div");
     thread.id = (`${threadid}`);
-    thread.innerHTML = output.txt;
-  document.body.appendChild(thread);
-//
-})
+   // image
+    var img = document.createElement('img');
+    var url = "https://bico.media/" + output.img
+    img.setAttribute("src", `${url}`);
+    console.log(`url is ${url}`);
+
+  //
+    thread.innerHTML =
+    "<p>" +
+    output.txt + "</p>" +
+    "<br />" +
+    "<button id='reply'>Reply</button>" 
+    document.body.appendChild(img);
+    document.body.appendChild(thread);
+
+  })
 })
 
