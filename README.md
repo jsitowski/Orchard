@@ -4,11 +4,11 @@ A simple text board that runs on the BSV network.
 
 Posts are formatted as such:
 
-## "13jgh5vQC5a43rvawKVourhCY7JiCaDpPH", "THREAD", "{text}", "{b:// image link}"
+# "13jgh5vQC5a43rvawKVourhCY7JiCaDpPH", "THREAD", "{text}", "{b:// image link}"
 
 or:
 
-## "13jgh5vQC5a43rvawKVourhCY7JiCaDpPH", "REPLY", "{text}", "{b:// image link}", "{replyto txid}"
+# "13jgh5vQC5a43rvawKVourhCY7JiCaDpPH", "REPLY", "{text}", "{b:// image link}", "{replyto txid}"
 
 <br />
 
