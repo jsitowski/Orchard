@@ -81,7 +81,7 @@ input:hover {
 img {
   margin: 5px 15px 10px;
   border-style: solid;
-  border-color: black;
+  border-color: darkslategrey;
   border-width: 3px; 
   width: 70%;
   height: auto;
@@ -112,4 +112,14 @@ h2 {
 .pic {
 	width: 300px;
 	height: auto;
+}
+a#replybutton {
+  padding-left: 8px;
+}
+a#replybutton:hover {
+  color: darkcyan;
+}
+p.replytext {
+  border-color: black;
+  border-width: 3px;
 }
