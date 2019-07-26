@@ -24,8 +24,6 @@ p.reply {
   padding-right: 15px;
   padding-bottom: 5px;
   padding-left: 5px;
-  outline-style: solid;
-  outline-color: darkcyan;
   width: 55%;
   background-image: linear-gradient(lightslategray, darkcyan);
   margin: 55px 25px 15px;
@@ -34,9 +32,9 @@ p.reply {
   text-align: justify;
   overflow: auto;
   box-sizing: border-box;
+  border-radius: 25px;
 }
 textarea {
-  align-box: center;
   color: ivory;
   border-style: solid;
   border-color: slategrey;
@@ -90,7 +88,7 @@ img {
 .post {
 	color: ivory;
 	border-style: solid;
-	border-color: darkslategrey;
+  border-color: darkslategrey;
 }
 h2 {
   color: lightslategray;
@@ -106,20 +104,33 @@ h2 {
 	bottom: 0;
 	right: 0;
 }
-.threadtext {
-	text-align: center;
+p.threadtext {
+  text-align: center;
+  border: 1px;
+  border-color: black;
 }
 .pic {
 	width: 300px;
 	height: auto;
 }
-a#replybutton {
+p#replybutton {
   padding-left: 8px;
+  
 }
-a#replybutton:hover {
+p#replybutton:hover {
   color: darkcyan;
 }
-p.replytext {
-  border-color: black;
-  border-width: 3px;
+div.reply {
+  border-left: 3px solid cyan;
+  margin: auto;
+  overflow: auto;
+  background-image: linear-gradient(slategrey, lightslategray);
+}
+.replypic {
+    overflow: auto;
+    display: table;
+}
+.replyform {
+  display: none;
+  overflow: auto;
 }
