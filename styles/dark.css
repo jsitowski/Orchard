@@ -113,24 +113,24 @@ p.threadtext {
 	width: 300px;
 	height: auto;
 }
-p#replybutton {
-  padding-left: 8px;
-  
-}
-p#replybutton:hover {
-  color: darkcyan;
-}
 div.reply {
   border-left: 3px solid cyan;
+  margin: 25px 50px 75px 100px;
   margin: auto;
   overflow: auto;
   background-image: linear-gradient(slategrey, lightslategray);
 }
 .replypic {
-    overflow: auto;
-    display: table;
+	width: 200px;
+  height: auto;
+  float: left;
 }
 .replyform {
   display: none;
   overflow: auto;
+}
+div.replytothread {
+  text-align: center;
+  font-size: 11px;
+
 }

@@ -12,7 +12,7 @@ var threads = {
     "out.s1": "13jgh5vQC5a43rvawKVourhCY7JiCaDpPH",
     "out.s2": "THREAD"
      },
-    "limit": 5,
+    "limit": 20,
   },
   "r": {
     "f": "[ .[] | { txid: .tx.h, timestamp: .blk.t?, txt: .out[0]?.s3, img: .out[0].s4 }]"
@@ -40,14 +40,26 @@ fetch(url, header).then(function(r) {
     "<br />" +
     output.txid +
     "<br />" +
+    "<br />" +
     "<img src=" + `${url}` + " class=pic></img>" +
     "<br />" + 
     "<p class=threadtext>" +
     "<br />" +
     "<br />" +
     "<br />" +
-    content + "</p>" + "<span>" 
-    + "<div class=reply></div>" + "</span>";
+    content + 
+    "<br />" +
+    "<br />" +
+    "<br />" +
+    //"<textarea id=replyform placeholder='Type your reply...'></textarea>" +
+    //"<input id=replyimglink placeholder='b:// image link'></textarea>" +
+    //"<div class=replytothread>Reply" + "</div>" +
+    //"<a href='#' id='replydone' class='reply'>Reply</a>" +
+    //"<div id='replysubmit' class='hidden'>" +
+    //    "<div id='replybutton'></div>" +
+      "</div>" +
+    "<br />" +
+    "<br />" + "</p>";
     document.body.appendChild(thread);
       var replies = {
         "v": 3,
@@ -80,16 +92,22 @@ fetch(url, header).then(function(r) {
           var replyurl = "https://bico.media/" + output.replyimg
           replyimg.setAttribute("src", `${url}`);
           console.log(replytxt + "//             " + replytxid + "//    " + "is a reply to   " + replyto);
-          var reply = document.getElementById(`${replyto}`);
-          console.log(replytxt + "REPLY");
-          thread.querySelector(".reply").innerHTML = 
+          var replyto = document.getElementById(`${replyto}`);
+          var reply = document.createElement("div");
+          reply.setAttribute("class", "reply");
+          reply.innerHTML =
+          "<span>" +
           "<br />" +
           replytxid +
           "<br />" +
           "<img src=" + `${replyurl}` + " class=replypic></img>" +
           "<br />" +
           replytxt +
-          "<br />";
+          "<br />" +
+          "<br />" +
+          "</span>" ;
+          thread.appendChild(reply);
+
       })
     })
   })
@@ -133,7 +151,5 @@ document.addEventListener("DOMContentLoaded", function() {
       </div>
   </center>
   <br />
-  <div id='replysubmit' class='hidden'></div>
-  <div id='replymb'></div>
 </body>
 </html>	
