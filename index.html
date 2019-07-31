@@ -51,16 +51,39 @@ fetch(url, header).then(function(r) {
     "<br />" +
     "<br />" +
     "<br />" +
-    //"<textarea id=replyform placeholder='Type your reply...'></textarea>" +
-    //"<input id=replyimglink placeholder='b:// image link'></textarea>" +
-    //"<div class=replytothread>Reply" + "</div>" +
-    //"<a href='#' id='replydone' class='reply'>Reply</a>" +
-    //"<div id='replysubmit' class='hidden'>" +
-    //    "<div id='replybutton'></div>" +
       "</div>" +
     "<br />" +
-    "<br />" + "</p>";
+    "<br />" + "</p>" +
+    "<center>" +
+    "<textarea id=replyform placeholder='Type your reply...' ></textarea>" +
+    "<br />" +
+    "<input id=replyimglink placeholder='b:// image link' ></textarea>" +
+    "<br />" +
+    "<a href='#' id='replydone' class='post' style='center'>Reply</a>" +
+    "<div id='replysubmit' class='hidden'>" +
+      "<br />" +
+      	"<div id='replybutton'></div>" +
+      "</div>" +
+      "</center>";
     document.body.appendChild(thread);
+	    thread.querySelector("#replydone").addEventListener("click", function(e) {
+        thread.querySelector("#replyform").classList.remove('hidden')
+        thread.querySelector("#replyimglink").classList.remove('hidden')
+        thread.querySelector("#replysubmit").classList.remove('hidden')
+   	  databutton.build({
+      data: ["13jgh5vQC5a43rvawKVourhCY7JiCaDpPH", "REPLY", thread.querySelector("#replyform").value, thread.querySelector("#replyimglink").value, threadid],
+      button: {
+        $el: "#replybutton",
+        label: "",
+        onPayment: function(e) {
+          console.log("paid!", e)
+          setTimeout(function() {
+            feed()
+          }, 1000)
+        }
+      }
+    })
+  });
       var replies = {
         "v": 3,
         "q": {
