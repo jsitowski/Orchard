@@ -9,7 +9,7 @@ var threads = {
   "v": 3,
   "q": {
     "find": {
-    "out.s1": "13jgh5vQC5a43rvawKVourhCY7JiCaDpPH",
+    "out.s1": "1Gd8GkWg1XTFJyjfeF1vuyzdSBM578kmDh",
     "out.s2": "THREAD"
      },
     "limit": 20,
@@ -56,7 +56,6 @@ fetch(url, header).then(function(r) {
     "<br />" + "</p>" +
     "<center>" +
     "<textarea id=replyform placeholder='Type your reply...' ></textarea>" +
-    "<br />" +
     "<input id=replyimglink placeholder='b:// image link' ></textarea>" +
     "<br />" +
     "<a href='#' id='replydone' class='post' style='center'>Reply</a>" +
@@ -71,7 +70,7 @@ fetch(url, header).then(function(r) {
         thread.querySelector("#replyimglink").classList.remove('hidden')
         thread.querySelector("#replysubmit").classList.remove('hidden')
    	  databutton.build({
-      data: ["13jgh5vQC5a43rvawKVourhCY7JiCaDpPH", "REPLY", thread.querySelector("#replyform").value, thread.querySelector("#replyimglink").value, threadid],
+      data: ["1Gd8GkWg1XTFJyjfeF1vuyzdSBM578kmDh", "REPLY", thread.querySelector("#replyform").value, thread.querySelector("#replyimglink").value, threadid],
       button: {
         $el: "#replybutton",
         label: "",
@@ -88,7 +87,7 @@ fetch(url, header).then(function(r) {
         "v": 3,
         "q": {
           "find": {
-          "out.s1": "13jgh5vQC5a43rvawKVourhCY7JiCaDpPH",
+          "out.s1": "1Gd8GkWg1XTFJyjfeF1vuyzdSBM578kmDh",
           "out.s2": "REPLY",
           "out.s5": threadid
           },
@@ -130,7 +129,6 @@ fetch(url, header).then(function(r) {
           "<br />" +
           "</span>" ;
           thread.appendChild(reply);
-
       })
     })
   })
@@ -141,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	document.querySelector("#done").addEventListener("click", function(e) {
     document.querySelector("#submit").classList.remove('hidden')
    	databutton.build({
-      data: ["13jgh5vQC5a43rvawKVourhCY7JiCaDpPH", "THREAD", document.querySelector("#newthread").value, document.querySelector("#imglink").value],
+      data: ["1Gd8GkWg1XTFJyjfeF1vuyzdSBM578kmDh", "THREAD", document.querySelector("#newthread").value, document.querySelector("#imglink").value],
       button: {
         $el: "#button",
         label: "",
@@ -157,11 +155,10 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 </script>
 <script>
-
 </script>
 </head>
 <body>
-<center>
+  <center>
 	<h1>Orchard</h1>
 	<h2>A peer-to-peer electronic <a href="library.html">image</a> board.</h2>
 		<textarea id="newthread" rows="5" cols="10" placeholder="Post a new thread..."></textarea>
@@ -175,4 +172,3 @@ document.addEventListener("DOMContentLoaded", function() {
   </center>
   <br />
 </body>
-</html>	
