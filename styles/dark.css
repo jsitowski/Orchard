@@ -8,7 +8,10 @@ h1 {
   text-shadow: 4px 2px slateblue;
   text-align: center;
 }
-
+h1:hover {
+  color: darkorchid;
+  text-shadow: 10px 5px black;
+}
 body {
   font-family: verdana;
 }
@@ -35,20 +38,22 @@ p.reply {
   border-radius: 25px;
 }
 textarea#newthread {
-  color: ivory;
   border-style: solid;
-  border-color: slategrey;
+  border-color: black;
+  border-radius: 10px;
+  color: ivory;
   border-width: 2px;
   padding-top: 20px;
   padding-right: 75px;
   padding-bottom: 25px;
   padding-left: 25px;
-  outline-style: solid;
-  outline-color: darkcyan;
   width: 45%;
   background-image: linear-gradient(darkslategray, darkcyan);
   margin: 15px 55px 5px;
   text-shadow: 2px 2px 4px #000000;
+}
+textarea#newthread:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 textarea#replyform {
   border-style: solid;
@@ -63,6 +68,8 @@ textarea#replyform {
   margin: 5px 15px 10px;
   color: bisque;
   font-size: 15px;
+  width: 221px;
+  height: 104px;
 }
 textarea#replyform:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
@@ -70,18 +77,20 @@ textarea#replyform:hover {
 input#imglink {
   color: ivory;
   border-style: solid;
-  border-color: slategrey;
-  border-width: 2px;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 5px;
   padding-top: 5px;
   padding-right: 10px;
   padding-bottom: 5px;
   padding-left: 5px;
-  outline-style: solid;
-  outline-color: darkcyan;
   width: 25%;
   background-image: linear-gradient(darkslategray, darkcyan);
   margin: 15px 35px 15px;
   text-shadow: 2px 2px 4px #000000;
+}
+input#imglink:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 input#replyimglink {
   border-style: solid;
