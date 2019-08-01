@@ -51,6 +51,7 @@ textarea#newthread {
   text-shadow: 2px 2px 4px #000000;
 }
 textarea#replyform {
+  margin: auto;
   background-image: linear-gradient(darkslategray, darkcyan);
   width: 60%;
   outline-color: darkcyan;
@@ -75,6 +76,7 @@ input#imglink {
   text-shadow: 2px 2px 4px #000000;
 }
 input#replyimglink {
+  margin: auto;
   color: ivory;
   border-style: solid;
   border-color: slategrey;
@@ -89,22 +91,12 @@ input#replyimglink {
   background-image: linear-gradient(darkslategray, darkcyan);
   text-shadow: 2px 2px 4px #000000;
 }
-input:hover {
-	background-color: darkslategrey;
-}
-.btn {
-  color: ivory;
-  width: 10%;
-  background-image: linear-gradient(darkcyan, lightslategray);
-  text-shadow: 2px 2px 4px #000000;
-  margin: 5px;
-}
 .pic {
   margin: 5px 15px 10px;
   border-style: solid;
   border-color: darkslategrey;
   border-width: 3px; 
-  width: 200px;
+  width: 300px;
   height: auto;
   float: left;
 }
@@ -130,10 +122,7 @@ p.threadtext {
   text-align: center;
   border: 1px;
   border-color: black;
-}
-.pic {
-	width: 300px;
-	height: auto;
+  
 }
 div.reply {
   border-left: 3px solid cyan;
@@ -154,4 +143,25 @@ div.reply {
 div.replytothread {
   text-align: center;
   font-size: 11px;
+}
+button {
+  border-style: solid;
+  border-color: slategrey;
+  border-width: 1px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  background-image: linear-gradient(darkslategray, darkcyan);
+  margin: 5px 15px 10px;
+  color: bisque;
+  font-size: 15px;
+  text-shadow: 4px 2px slateblue;
+}
+hr {
+  color: bisque;
+  visibility: hidden;
+}
+.hidden {
+  visibility: hidden;
 }
