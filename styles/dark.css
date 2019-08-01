@@ -19,13 +19,13 @@ p.reply {
   color: ivory;
   border-style: solid;
   border-color: slategrey;
-  border-width: 2px;
+  border-width: 4px;
   padding-top: 2px;
   padding-right: 15px;
   padding-bottom: 5px;
   padding-left: 5px;
   width: 55%;
-  background-image: linear-gradient(lightslategray, darkcyan);
+  background-image: linear-gradient(lightslategray, slateblue);
   margin: 55px 25px 15px;
   text-shadow: 2px 2px 4px #000000;
   font-size: 18px;
@@ -81,7 +81,7 @@ input#replyimglink {
   border-style: solid;
   border-color: slategrey;
   border-width: 2px;
-  padding-top: 5px;
+  padding-top: 10px;
   padding-right: 10px;
   padding-bottom: 5px;
   padding-left: 5px;
@@ -125,17 +125,25 @@ p.threadtext {
   
 }
 div.reply {
-  border-left: 3px solid cyan;
-  margin: 25px 50px 75px 100px;
-  margin: auto;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  margin: 15px 15px 15px;
   overflow: auto;
-  background-image: linear-gradient(slategrey, lightslategray);
+  background-image: linear-gradient(darkslategray, darkcyan);
   text-align: center;
+  padding-bottom: 10px;
+  width: 80%;
+  float: right;
 }
 .replypic {
-	width: 200px;
+	width: 300px;
   height: auto;
   float: left;
+  border-style: solid;
+  border-color: darkcyan;
+  border-width: 3px;
+  margin: 5px 15px 10px;
 }
 .replyform {
   margin-top: 20px;
@@ -167,4 +175,15 @@ hr {
 }
 .hidden {
   visibility: hidden;
+}
+
+div.op {
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  margin: auto;
+  overflow: auto;
+  background-image: linear-gradient(darkslategray, darkcyan);
+  text-align: center;
+  padding-bottom: 10px;
 }

@@ -8,6 +8,7 @@
 var threads = {
   "v": 3,
   "q": {
+    "db": ["u","c"],
     "find": {
     "out.s1": "1Gd8GkWg1XTFJyjfeF1vuyzdSBM578kmDh",
     "out.s2": "THREAD"
@@ -26,7 +27,8 @@ var header = {
 fetch(url, header).then(function(r) {
   return r.json()
 }).then(function(r) {
-  r.c.forEach(function(output) {
+  let res = r.u.concat(r.c)
+  res.forEach(function(output) {
     var threadid = output.txid;
     var content = output.txt;
     console.log(`message is ${content}`);
@@ -40,22 +42,27 @@ fetch(url, header).then(function(r) {
     thread.innerHTML =
     "<button id=openreply>Reply</button>" +
     "<br />" +
+    "<div class='op'>" +
     "<img src=" + `${url}` + " class=pic></img>" +
     "<br />" +
     "<p class=threadtext>" +
     content + 
-      "</div>" +
+
    "</p>" +
       "<hr />" +
       "<br />" +
     "<textarea id=replyform placeholder='Type your reply...' class='hidden'></textarea>" +
+    "<br />" +
+    "<br />" +
     "<input id=replyimglink placeholder='b:// image link' class='hidden'></textarea>" +
     "<br />" +
     "<button href='#' id=replydone" + threadid + " class='hidden'>Post reply!</button>" +
       "<button href='#' id='closereply' style='center' class='hidden'>Close</button>" +
+      "<br />" +
       "<div id='replysubmit' class='hidden'>" +
       "<br />" +
         "<div id=replybutton" + threadid + "></div>" +
+          "</div>" +
           "</div>" +
       "</center>";
     document.body.appendChild(thread);
@@ -99,12 +106,13 @@ fetch(url, header).then(function(r) {
       var replies = {
         "v": 3,
         "q": {
+          "db": ["u","c"],
           "find": {
           "out.s1": "1Gd8GkWg1XTFJyjfeF1vuyzdSBM578kmDh",
           "out.s2": "REPLY",
           "out.s5": threadid
           },
-          "limit": 10,
+          "limit": 100,
         },
         "r": {
           "f": "[ .[] | {replytxid: .tx.h, replystamp: .blk.t?, replytxt: .out[0].s3, replyimg: .out[0].s4, replyto: .out[0].s5 }]"
@@ -118,7 +126,8 @@ fetch(url, header).then(function(r) {
       fetch(url, header).then(function(r) {
         return r.json()
       }).then(function(r) {
-        r.c.forEach(function(output) {
+        let res = r.u.concat(r.c)
+        res.forEach(function(output) {
           replyto = output.replyto;
           replytxt = output.replytxt;
           replytxid = output.replytxid;
@@ -131,14 +140,15 @@ fetch(url, header).then(function(r) {
           var reply = document.createElement("div");
           reply.setAttribute("class", "reply");
           reply.innerHTML =
-          "<span>" +
           "<br />" +
           "<img src=" + `${replyurl}` + " class=replypic></img>" +
           "<br />" +
+          "<p class=replytext>" +
           replytxt +
+          "</p>" +
           "<br />" +
-          "<br />" +
-          "</span>" ;
+          "<br />"  +
+          "<hr />" ;
           thread.appendChild(reply);
       })
     })

@@ -3,8 +3,7 @@ var threads = {
   "v": 3,
   "q": {
     "find": {
-    "out.s1": "1Gd8GkWg1XTFJyjfeF1vuyzdSBM578kmDh",
-    "out.s2": "THREAD"
+    "out.s1": "1Gd8GkWg1XTFJyjfeF1vuyzdSBM578kmDh"
      },
     "limit": 30,
   },
@@ -24,7 +23,8 @@ fetch(url, header).then(function(r) {
   return r.json()
 
 }).then(function(r) {
-  r.c.forEach(function(output) {
+  let res = r.u.concat(r.c)
+  res.forEach(function(output) {
 
     var threadid = output.txid;
     var content = output.txt;
