@@ -34,7 +34,8 @@ fetch(url, header).then(function(r) {
     thread.id = (`${threadid}`);
     thread.setAttribute('class', 'thread');
     var img = document.createElement('img');
-    var url = "https://bico.media/" + output.img
+    var url = "https://bico.media/" + output.img;
+    var opid = "replydone" + threadid;
     img.setAttribute("src", `${url}`);
     thread.innerHTML =
     "<button id=openreply>Reply</button>" +
@@ -42,28 +43,20 @@ fetch(url, header).then(function(r) {
     "<img src=" + `${url}` + " class=pic></img>" +
     "<br />" +
     "<p class=threadtext>" +
-    "<br />" +
-    "<br />" +
-    "<br />" +
     content + 
-    "<br />" +
-    "<br />" +
-    "<br />" +
       "</div>" +
-    "<br />" +
-    "<br />" + "</p>" +
-    "<center>" +
-      "<hr>" +
+   "</p>" +
+      "<hr />" +
       "<br />" +
     "<textarea id=replyform placeholder='Type your reply...' class='hidden'></textarea>" +
     "<input id=replyimglink placeholder='b:// image link' class='hidden'></textarea>" +
     "<br />" +
-    "<button href='#' id='replydone' style='center' class='hidden'>Post reply!</button>" +
+    "<button href='#' id=replydone" + threadid + " class='hidden'>Post reply!</button>" +
       "<button href='#' id='closereply' style='center' class='hidden'>Close</button>" +
       "<div id='replysubmit' class='hidden'>" +
       "<br />" +
-      	"<div id='replybutton'></div>" +
-      "</button>" +
+        "<div id=replybutton" + threadid + "></div>" +
+          "</div>" +
       "</center>";
     document.body.appendChild(thread);
     thread.querySelector("#openreply").addEventListener("click", function(e) {
@@ -71,22 +64,22 @@ fetch(url, header).then(function(r) {
         thread.querySelector("#replyimglink").classList.remove('hidden')
         thread.querySelector("#replysubmit").classList.remove('hidden')
         thread.querySelector("#closereply").classList.remove('hidden')
-        thread.querySelector("#replydone").classList.remove('hidden')
+        thread.querySelector("#replydone" + threadid).classList.remove('hidden')
         thread.querySelector("#openreply").classList.add('hidden')
     });
     thread.querySelector("#closereply").addEventListener("click", function(e) {
       thread.querySelector("#replyform").classList.add('hidden')
         thread.querySelector("#replyimglink").classList.add('hidden')
         thread.querySelector("#replysubmit").classList.add('hidden')
-        thread.querySelector("#replydone").classList.add('hidden')
+        thread.querySelector("replydone" + threadid).classList.add('hidden')
         thread.querySelector("#openreply").classList.remove('hidden')
         thread.querySelector("#closereply").classList.add('hidden')
     })
-      thread.querySelector("#replydone").addEventListener("click", function(e) {
+    thread.querySelector("#replydone" + threadid).addEventListener("click", function(e) {
    	  databutton.build({
       data: ["1Gd8GkWg1XTFJyjfeF1vuyzdSBM578kmDh", "REPLY", thread.querySelector("#replyform").value, thread.querySelector("#replyimglink").value, threadid],
       button: {
-        $el: "#replybutton",
+        $el: "#replybutton" + threadid,
         label: "",
         onPayment: function(e) {
           console.log("paid!", e)
@@ -134,8 +127,6 @@ fetch(url, header).then(function(r) {
           reply.innerHTML =
           "<span>" +
           "<br />" +
-          replytxid +
-          "<br />" +
           "<img src=" + `${replyurl}` + " class=replypic></img>" +
           "<br />" +
           replytxt +
@@ -157,6 +148,12 @@ document.addEventListener("DOMContentLoaded", function() {
       button: {
         $el: "#button",
         label: "",
+        $pay: {
+          to: [{
+            address: "1MYmU9FUtotg1xfQwuJgYKydt5Mg8ueV62",
+            value: 5000
+          }],
+        },
         onPayment: function(e) {
           console.log("paid!", e)
           setTimeout(function() {
