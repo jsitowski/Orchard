@@ -71,7 +71,7 @@ fetch(url, header).then(function(r) {
       thread.querySelector("#replyform").classList.add('hidden')
         thread.querySelector("#replyimglink").classList.add('hidden')
         thread.querySelector("#replysubmit").classList.add('hidden')
-        thread.querySelector("replydone" + threadid).classList.add('hidden')
+        thread.querySelector("#replydone" + threadid).classList.add('hidden')
         thread.querySelector("#openreply").classList.remove('hidden')
         thread.querySelector("#closereply").classList.add('hidden')
     })
@@ -81,6 +81,12 @@ fetch(url, header).then(function(r) {
       button: {
         $el: "#replybutton" + threadid,
         label: "",
+        $pay: {
+          to: [{
+            address: "1MYmU9FUtotg1xfQwuJgYKydt5Mg8ueV62",
+            value: 5000
+          }],
+        },
         onPayment: function(e) {
           console.log("paid!", e)
           setTimeout(function() {
